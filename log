@@ -26,3 +26,26 @@ Wed, Mar 19, 2025 11:47:29 AM:
  tests:  4|1
 total_score: 50/70
 795c9d0
+Wed, Mar 19, 2025 12:06:14 PM: 
+ exercises.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:125:19: error: passing argument 1 of 'strcmp' makes pointer from integer without a cast [-Werror=int-conversion]
+       if (!strcmp(cadena[i], cadena[k-1])) return 0 ;
+                   ^~~~~~
+In file included from test.c:3:0:
+c:\mingw\include\string.h:77:38: note: expected 'const char *' but argument is of type 'char'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+                                      ^~~~~~
+In file included from test.c:5:0:
+exercises.c:125:30: error: passing argument 2 of 'strcmp' makes pointer from integer without a cast [-Werror=int-conversion]
+       if (!strcmp(cadena[i], cadena[k-1])) return 0 ;
+                              ^~~~~~
+In file included from test.c:3:0:
+c:\mingw\include\string.h:77:38: note: expected 'const char *' but argument is of type 'char'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+                                      ^~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+ac18f99
