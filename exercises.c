@@ -132,24 +132,6 @@ int parentesisBalanceados(char *cadena) {
       return 0 ;
    }
    
-   int* dato = (int *) malloc(sizeof(int)) ;
-   int k = i / 2 ;
-   for(i = 0 ; i < k ; i++) {
-      dato = top(stack_aux) ;
-      switch (cadena[i]) {
-         case '(' :
-            if (*dato != ')') return 0 ; 
-            break ;
-         case '{' :
-            if (*dato != '}') return 0 ;
-            break ;
-         case '[' :
-            if (*dato != ']') return 0 ;
-            break ;
-      }
-      pop(stack_aux) ;
-   }
-
    free(stack_aux) ;
    return 1 ;
 }
