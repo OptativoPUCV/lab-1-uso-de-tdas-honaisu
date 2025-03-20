@@ -151,7 +151,6 @@ int parentesisBalanceados(char *cadena) {
    }
 
    free(stack_aux) ;
-   free(dato) ;
    return 1 ;
 }
 
