@@ -55,3 +55,33 @@ Wed, Mar 19, 2025 12:07:27 PM:
  tests:  4|1
 total_score: 50/70
 18b87a1
+Thu, Mar 20, 2025  5:41:44 PM: 
+ exercises.c | 15 ++++++++++++---
+ 1 file changed, 12 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:125:20: error: comparison between pointer and integer [-Werror]
+    while(cadena[i] != NULL) {
+                    ^~
+exercises.c:126:23: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+       push(stack_aux, cadena[i]) ;
+                       ^~~~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'void *' but argument is of type 'char'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:132:57: error: comparison between pointer and integer [-Werror]
+       if (!(cadena[i] == '(' && (char *) top(stack_aux) == ')')) return 0 ;
+                                                         ^~
+exercises.c:133:24: error: passing argument 1 of 'strcmp' makes pointer from integer without a cast [-Werror=int-conversion]
+       else if (!strcmp(cadena[i], (char *) (top(stack_aux)) - 2)) return 0 ;
+                        ^~~~~~
+In file included from test.c:3:0:
+c:\mingw\include\string.h:77:38: note: expected 'const char *' but argument is of type 'char'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+                                      ^~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+831fe7d
