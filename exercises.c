@@ -124,7 +124,7 @@ int parentesisBalanceados(char *cadena) {
    int* dato = (int *) malloc(sizeof(int)) ;
    
    while(cadena[i]) {
-      push(stack_aux, cadena[i]) ;
+      push(stack_aux, &cadena[i]) ;
       i++ ;
    }
    
@@ -139,7 +139,7 @@ int parentesisBalanceados(char *cadena) {
             if (*dato != cadena[i] + 2) return 0 ;
       }
    }
-   
+
    free(stack_aux) ;
    free(dato) ;
    return 1 ;
