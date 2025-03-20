@@ -133,8 +133,7 @@ int parentesisBalanceados(char *cadena) {
    }
    
    char* dato ; // RECORDATORIO PERSONAL: VERIFICAR QUE TIPO DE DATO ES
-   int k = i / 2 ;
-   for(i = 0 ; i < k ; i++) {
+   for(int k = i / 2, i = 0 ; i < k ; i++) {
       dato = top(stack_aux) ;
       switch (cadena[i]) {
          case '(' : {
