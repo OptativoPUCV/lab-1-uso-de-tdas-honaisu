@@ -129,7 +129,7 @@ int parentesisBalanceados(char *cadena) {
    }
    if (i % 2) return 0 ;
    
-   for(i = 0 ; top(stack_aux) != NULL ; pop(stack_aux), i++) {
+   for(i = 0 ; cadena[i] / 2 ; pop(stack_aux), i++) {
       dato = top(stack_aux) ;
       switch (cadena[i]) {
          case '(' : {
