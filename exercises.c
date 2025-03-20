@@ -145,6 +145,7 @@ int parentesisBalanceados(char *cadena) {
             break ;
          case '[' :
             if (*dato != ']') return 0 ;
+            break ;
       }
       pop(stack_aux) ;
    }
